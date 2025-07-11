@@ -1,5 +1,6 @@
 import { Header } from "./_components/header";
 import { Title } from "./_components/title";
+import { Trusted } from "./_components/trusted";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
 
       <main>
         <Title />
+
+        <Trusted />
       </main>
     </div>
   );
