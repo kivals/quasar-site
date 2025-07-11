@@ -15,7 +15,7 @@ function TrustedItem() {
 
 function TrustedBlock() {
   return (
-    <div className="grid xl:flex grid-rows-2 grid-cols-2 max-xl:w-[calc(100vw-2rem)] aspect-square gap-2.5 xl:gap-10">
+    <div className="grid xl:flex grid-rows-2 grid-cols-2 max-xl:w-[calc(100vw-2rem)] max-xl:aspect-square gap-2.5 xl:gap-10">
       <TrustedItem />
       <TrustedItem />
       <TrustedItem />
