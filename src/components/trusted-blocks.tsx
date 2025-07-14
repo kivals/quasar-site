@@ -10,6 +10,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const logos = [
+  "/images/gbu.png",
   "/images/minstroy.png",
   "/images/gbu.png",
   "/images/iskra.png",
@@ -38,14 +39,15 @@ function TrustedGrid({ className }: { className?: string }) {
   );
 }
 
-function TrustedItem({ src }: { src?: string }) {
+function TrustedItem({ src }: { src: string }) {
   return (
-    <div className="relative size-[150px] overflow-clip rounded-[20px] bg-white md:size-[250px]">
+    <div className="flex size-[150px] items-center justify-center overflow-clip rounded-[20px] bg-white p-8 md:size-[250px] 2xl:size-[250px]">
       <Image
-        src={src || "/images/minstroy.png"}
+        src={src}
         alt="MinStroy logo"
-        fill
-        className="object-contain opacity-50 grayscale"
+        width={250}
+        height={250}
+        className="object-contain"
       />
     </div>
   );
@@ -56,32 +58,19 @@ function TrustedCarousel({ className }: { className?: string }) {
     <Carousel
       plugins={[
         Autoplay({
-          delay: 5000,
+          delay: 4000,
         }),
       ]}
       className={cn("w-full", className)}
     >
-      <CarouselContent className="-ml-1">
+      <CarouselContent className="-ml-1 gap-x-3">
         {logos.map((src, index) => (
-          <CarouselItem key={index} className="pl-1 lg:basis-1/4">
+          <CarouselItem key={index} className="pl-1 lg:basis-1/4 xl:basis-1/4 2xl:basis-1/6">
             <TrustedItem src={src} />
           </CarouselItem>
         ))}
       </CarouselContent>
     </Carousel>
-    /*<div className="grid xl:flex grid-rows-2 grid-cols-2 max-xl:w-[calc(100vw-2rem)] max-xl:aspect-square gap-2.5 xl:gap-10">
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-      <TrustedItem />
-    </div>*/
   );
 }
 

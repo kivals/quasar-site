@@ -3,9 +3,9 @@ import { ServicesBackground } from "./services-background";
 
 function ServiceItem({ children }: PropsWithChildren) {
   return (
-    <div className="max-xl:text-center rounded-[30px] bg-white/80 backdrop-blur-3xl px-3 xl:px-11 py-4 xl:py-15 flex flex-col max-xl:items-center justify-center xl:justify-end">
+    <div className="flex flex-col justify-center rounded-[30px] bg-white/80 px-3 py-4 backdrop-blur-3xl max-xl:items-center max-xl:text-center xl:justify-end xl:px-11 xl:py-15">
       <p className="text-[24px] xl:text-[40px]">{children}</p>
-      <a className="text-[24px] xl:text-[32px] font-semibold text-accent mt-2.5">
+      <a className="text-accent mt-2.5 text-[24px] font-semibold xl:text-[32px]">
         Подробнее
       </a>
     </div>
@@ -14,13 +14,13 @@ function ServiceItem({ children }: PropsWithChildren) {
 
 export function Services() {
   return (
-    <div className="mt-8.5 xl:mt-30 xl:mx-21.5 relative">
-      <h2 className="font-medium text-[28px] xl:text-[80px] text-center">
+    <div className="relative mt-8.5 xl:mx-21.5 xl:mt-30">
+      <h2 className="text-center text-[28px] font-medium xl:text-[80px]">
         Услуги
       </h2>
 
-      <div className="grid grid-rows-2 xl:grid-rows-[auto_auto] mt-5 gap-2.5 xl:gap-7.5 max-xl:mx-5 xl:drop-shadow-[0_0_50px_#00000020]">
-        <div className="grid grid-rows-2 gap-2.5 xl:gap-7.5 xl:grid-rows-1 xl:grid-cols-2 xl:pr-26">
+      <div className="mt-5 grid grid-rows-2 gap-2.5 max-xl:mx-5 xl:grid-rows-[auto_auto] xl:gap-7.5 xl:drop-shadow-[0_0_50px_#00000020]">
+        <div className="grid grid-rows-2 gap-2.5 xl:grid-cols-2 xl:grid-rows-1 xl:gap-7.5 xl:pr-26">
           <ServiceItem>
             Разработка ИТ-систем: проектирование, разработка и внедрение
             программного обеспечения под задачи бизнеса
@@ -28,14 +28,14 @@ export function Services() {
           <ServiceItem>Сопровождение информационных систем</ServiceItem>
         </div>
 
-        <div className="grid grid-rows-2 gap-2.5 xl:gap-7.5 xl:grid-rows-1 xl:grid-cols-2 xl:pl-26">
+        <div className="grid grid-rows-2 gap-2.5 xl:grid-cols-2 xl:grid-rows-1 xl:gap-7.5 xl:pl-26">
           <ServiceItem>Разработка встраиваемых систем</ServiceItem>
           <ServiceItem>Разработка сайтов</ServiceItem>
         </div>
       </div>
 
-      <div className="absolute xl:hidden inset-0 -z-10 overflow-clip">
-        <div className="absolute -left-80 -top-62">
+      <div className="absolute inset-0 -z-10 overflow-clip xl:hidden">
+        <div className="absolute -top-62 -left-80">
           <ServicesBackground />
         </div>
       </div>
