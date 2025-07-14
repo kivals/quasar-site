@@ -4,11 +4,11 @@ import { PropsWithChildren } from "react";
 import Container from "@/components/container";
 
 function PointTitle({ children }: PropsWithChildren) {
-  return <p className="text-[42px] font-medium xl:text-[84px]">{children}</p>;
+  return <p className="text-[42px] font-medium xl:text-[72px]">{children}</p>;
 }
 
 function PointText({ children }: PropsWithChildren) {
-  return <p className="text-[28px] xl:text-[42px]">{children}</p>;
+  return <p className="text-[24px] xl:text-[32px]">{children}</p>;
 }
 
 export function Title() {
@@ -23,7 +23,7 @@ export function Title() {
           <Globe className="-ml-[20%] w-[140%] xl:mx-auto xl:max-w-[1100px]" />
         </div>
 
-        <div className="flex flex-col lg:flex-row mt-55 rounded-[40px] bg-white pt-5 pb-8.5 drop-shadow-[0_0_50px_#34538980] xl:mx-21.5 xl:mt-110 xl:flex xl:p-20">
+        <div className="flex gap-x-3 flex-col lg:flex-row mt-55 rounded-[40px] bg-white pt-5 pb-8.5 drop-shadow-[0_0_50px_#34538980] xl:mx-21.5 xl:mt-110 xl:flex xl:p-20">
           <div className="flex-1">
             <div className="grid w-max grid-cols-[auto_auto] items-center gap-x-7.5 max-xl:mx-auto max-xl:justify-items-center max-xl:px-13 xl:gap-x-2.5">
               <Image
@@ -40,7 +40,7 @@ export function Title() {
               </span>
             </div>
 
-            <div className="font-jura mt-5 lg:max-w-[476px] text-[22px] font-medium max-xl:px-2 max-xl:text-center xl:text-[28px]">
+            <div className="font-jura mt-5 lg:max-w-[476px] text-[22px] font-medium max-xl:px-2 max-xl:text-center xl:text-[24px]">
               <p>
                 Разработка и создание технологий для нужд органов
                 государственной власти, бизнес-структур и частных лиц.
