@@ -1,11 +1,14 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
+import SectionTitle from "@/components/ui/section-title";
 
 export function Products() {
   return (
     <section className="mt-8.5 lg:bg-[url('/images/bg/product-bg.png')] xl:mt-19">
-      <Container>
-        <h3 className="mb-5 text-center text-[80px] font-medium">Продукты</h3>
+      <Container><SectionTitle>
+        Продукты
+      </SectionTitle>
+
         <div className="flex flex-col gap-y-8">
           <ProductItem title="ЦПСО" bg="/images/bg/bg1.png">
             Цифровая платформа сервисного обслуживания (ЦПСО) –
@@ -16,7 +19,7 @@ export function Products() {
             приобретенное/внедренное/разработанное под заказ изделие (особенно
             технически сложное) или услугу.
           </ProductItem>
-          <ProductItem title="СОКОЛ" description="" bg="/images/bg/bg2.png">
+          <ProductItem title="СОКОЛ" bg="/images/bg/bg2.png">
             Платформа видеоаналитики для контроля за правильностью действий
             персонала -система компьютерного зрения Сокол позволяет организовать
             интеллектуальное наблюдение, основанное на технологии искусственного

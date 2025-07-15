@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import { ServicesBackground } from "./services-background";
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
+import SectionTitle from "@/components/ui/section-title";
 
 function ServiceItem({ children }: PropsWithChildren) {
   return (
@@ -21,12 +22,10 @@ export function Services() {
   return (
     <Container>
       <div className="relative mt-8.5 xl:mt-30">
-        <h2 className="text-center text-[28px] font-medium xl:text-[40px] 2xl:text-[80px]">
-          Услуги
-        </h2>
+        <SectionTitle>Услуги</SectionTitle>
 
         <div className="mt-5 grid grid-rows-2 gap-2.5 max-xl:mx-5 xl:grid-rows-[auto_auto] xl:gap-7.5 xl:drop-shadow-[0_0_50px_#00000020]">
-          <div className="grid grid-rows-2 gap-2.5 xl:grid-cols-2 xl:grid-rows-1 xl:gap-5 2xl:gap-7.5 xl:pr-26">
+          <div className="grid grid-rows-2 gap-2.5 xl:grid-cols-2 xl:grid-rows-1 xl:gap-5 xl:pr-26 2xl:gap-7.5">
             <ServiceItem>
               Разработка ИТ-систем: проектирование, разработка и внедрение
               программного обеспечения под задачи бизнеса
