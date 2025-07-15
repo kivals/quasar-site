@@ -3,6 +3,7 @@ import { Services } from "./_components/services";
 import { Title } from "./_components/title";
 import { Trusted } from "./_components/trusted";
 import { Products } from "./_components/products";
+import Certifications from "@/app/_components/certifications";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         <Services />
 
         <Products />
+
+        <Certifications />
       </main>
     </div>
   );
