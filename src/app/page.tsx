@@ -7,6 +7,7 @@ import Certifications from "@/app/_components/certifications";
 import Partners from "@/app/_components/partners";
 import NewsSection from "@/app/_components/news-section";
 import ConsultationSection from "@/app/_components/consultation-section";
+import CareerSection from "@/app/_components/career-section";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
         <NewsSection />
 
         <ConsultationSection />
+
+        <CareerSection />
       </main>
     </div>
   );

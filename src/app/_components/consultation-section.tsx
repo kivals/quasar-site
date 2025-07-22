@@ -3,9 +3,9 @@ import SectionTitle from "@/components/section-title";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function ConsultationSection() {
   return (
@@ -57,11 +57,16 @@ export default function ConsultationSection() {
                   placeholder="Сообщение"
                 />
                 <div className="flex items-center gap-3">
-                  <Checkbox className="w-[30px] h-[30px]" id="terms"/>
-                  <Label className="text-[28px] font-normal" htmlFor="terms">Согласен с Политикой конфиденциальности</Label>
+                  <Checkbox className="h-[30px] w-[30px]" id="terms" />
+                  <Label className="text-[28px] font-normal" htmlFor="terms">
+                    Согласен с Политикой конфиденциальности
+                  </Label>
                 </div>
 
-                <Button disabled={true} className="h-[85px] bg-accent cursor-pointer rounded-[20px] py-6 font-semibold text-white lg:flex lg:text-lg xl:text-xl 2xl:text-[32px]">
+                <Button
+                  disabled={true}
+                  className="bg-accent h-[85px] cursor-pointer rounded-[20px] py-6 font-semibold text-white lg:flex lg:text-lg xl:text-xl 2xl:text-[32px]"
+                >
                   Отправить
                 </Button>
               </div>
