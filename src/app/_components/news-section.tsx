@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 import News from "@/components/news/news";
 
 export default function NewsSection() {

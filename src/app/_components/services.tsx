@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import { ServicesBackground } from "./services-background";
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 
 function ServiceItem({ children }: PropsWithChildren) {
   return (

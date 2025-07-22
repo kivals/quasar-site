@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 import Container from "@/components/container";
 import Image from "next/image";
 import { cn } from "@/lib/utils";

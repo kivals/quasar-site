@@ -1,0 +1,74 @@
+import Container from "@/components/container";
+import SectionTitle from "@/components/section-title";
+import Image from "next/image";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Label} from "@/components/ui/label";
+import {Button} from "@/components/ui/button";
+
+export default function ConsultationSection() {
+  return (
+    <section className="mb-28 lg:bg-[url('/images/bg/consult-bg.png')]">
+      <Container>
+        <SectionTitle>Проконсультируйтесь со cпециалистом</SectionTitle>
+        <div className="flex gap-8">
+          <div className="flex w-[36%] flex-col items-center gap-y-5 rounded-[30px] bg-white px-10 py-20 text-center drop-shadow-lg">
+            <span className="text-[40px]">Мы свяжемся с Вами</span>
+            <Image
+              className="h-[107px] w-[30px]"
+              src="/images/down_line.png"
+              width="30"
+              height="107"
+              alt="Стрелка вниз"
+            />
+            <span className="text-[40px]">Обсудим Вашу задачу</span>
+            <Image
+              className="h-[107px] w-[30px]"
+              src="/images/down_line.png"
+              width="30"
+              height="107"
+              alt="Стрелка вниз"
+            />
+            <span className="text-[40px] font-semibold">
+              Найдем лучшее решение
+            </span>
+          </div>
+          <div className="flex-1 rounded-[30px] bg-white px-20 py-6 drop-shadow-lg">
+            <form action="">
+              <div className="flex flex-col gap-y-5">
+                <Input
+                  className="h-[80px] rounded-[20px] rounded-bl-[0px] border-[1.5px] border-[#354389] text-[32px] font-normal placeholder:text-[32px]"
+                  type="text"
+                  placeholder="Имя"
+                />
+                <Input
+                  className="h-[80px] rounded-[20px] rounded-bl-[0px] border-[1.5px] border-[#354389] text-[32px] font-normal placeholder:text-[32px]"
+                  type="tel"
+                  placeholder="Телефон"
+                />
+                <Input
+                  className="h-[80px] rounded-[20px] rounded-bl-[0px] border-[1.5px] border-[#354389] text-[32px] font-normal placeholder:text-[32px]"
+                  type="email"
+                  placeholder="Email"
+                />
+                <Textarea
+                  className="h-[210px] rounded-[20px] rounded-bl-[0px] border-[1.5px] border-[#354389] text-[32px] font-normal placeholder:text-[32px]"
+                  placeholder="Сообщение"
+                />
+                <div className="flex items-center gap-3">
+                  <Checkbox className="w-[30px] h-[30px]" id="terms"/>
+                  <Label className="text-[28px] font-normal" htmlFor="terms">Согласен с Политикой конфиденциальности</Label>
+                </div>
+
+                <Button disabled={true} className="h-[85px] bg-accent cursor-pointer rounded-[20px] py-6 font-semibold text-white lg:flex lg:text-lg xl:text-xl 2xl:text-[32px]">
+                  Отправить
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

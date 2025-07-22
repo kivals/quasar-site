@@ -6,6 +6,7 @@ import { Products } from "./_components/products";
 import Certifications from "@/app/_components/certifications";
 import Partners from "@/app/_components/partners";
 import NewsSection from "@/app/_components/news-section";
+import ConsultationSection from "@/app/_components/consultation-section";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
         <Partners />
 
         <NewsSection />
+
+        <ConsultationSection />
       </main>
     </div>
   );

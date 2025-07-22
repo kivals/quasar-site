@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 
 export function Products() {
   return (

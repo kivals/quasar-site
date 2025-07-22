@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import TrustedBlocks from "@/components/trusted-blocks";
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 
 export function Trusted() {
   return (

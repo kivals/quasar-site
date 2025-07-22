@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/ui/section-title";
+import SectionTitle from "@/components/section-title";
 import Container from "@/components/container";
 import CertificationsCarousel from "@/components/certifications-carousel";
 
