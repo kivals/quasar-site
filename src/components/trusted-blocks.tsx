@@ -10,14 +10,12 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const logos = [
-  "/images/gbu.png",
-  "/images/minstroy.png",
-  "/images/gbu.png",
-  "/images/iskra.png",
-  "/images/laonit.png",
-  "/images/mei.png",
-  "/images/minstroy.png",
-  "/images/minstroy.png",
+  "/images/trusted/minstroy.png",
+  "/images/trusted/gbu.png",
+  "/images/trusted/iskra.jpg",
+  "/images/trusted/laonit.png",
+  "/images/trusted/mei.png",
+  "/images/trusted/trance-mash.jpg",
 ];
 
 function TrustedBlocks() {
@@ -41,13 +39,13 @@ function TrustedGrid({ className }: { className?: string }) {
 
 function TrustedItem({ src }: { src: string }) {
   return (
-    <div className="flex size-[150px] items-center justify-center overflow-clip rounded-[20px] bg-white p-8 md:size-[250px] 2xl:size-[250px]">
+    <div className="flex size-[150px] items-center justify-center overflow-clip rounded-[20px] bg-white p-8 transition duration-300 hover:shadow-lg md:size-[250px] 2xl:size-[250px]">
       <Image
         src={src}
         alt="MinStroy logo"
         width={250}
         height={250}
-        className="object-contain"
+        className="object-contain opacity-50 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
       />
     </div>
   );
@@ -65,8 +63,13 @@ function TrustedCarousel({ className }: { className?: string }) {
     >
       <CarouselContent className="-ml-1 gap-x-3">
         {logos.map((src, index) => (
-          <CarouselItem key={index} className="pl-1 lg:basis-1/4 xl:basis-1/4 2xl:basis-1/6">
-            <TrustedItem src={src} />
+          <CarouselItem
+            key={index}
+            className="pl-1 lg:basis-1/4 xl:basis-1/4 2xl:basis-1/6"
+          >
+            <div className="py-5">
+              <TrustedItem src={src} />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>

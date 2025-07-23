@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 const partnerLogos = [
   "/images/partners/aeroflot.png",
   "/images/partners/art.png",
-  "/images/partners/fond.png",
-  "/images/partners/gonec.png",
+  "/images/partners/fond.jpg",
+  "/images/partners/gonec.jpg",
   "/images/partners/hospital.png",
-  "/images/partners/logrocon.png",
-  "/images/partners/mai.png",
+  "/images/partners/logrocon.jpg",
+  "/images/partners/mai.jpg",
   "/images/partners/mgtu.png",
   "/images/partners/quarta.png",
   "/images/partners/yniver.png",
@@ -28,7 +28,11 @@ export default function Partners() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
           {partnerLogos.map((logo, index) => (
-            <PartnerItem key={index} className={cn(index >= 5 && "xl:translate-x-2/3")} src={logo} />
+            <PartnerItem
+              key={index}
+              className={cn(index >= 5 && "xl:translate-x-2/3")}
+              src={logo}
+            />
           ))}
         </div>
       </Container>
@@ -40,7 +44,7 @@ function PartnerItem({ src, className }: { className?: string; src: string }) {
   return (
     <div
       className={cn(
-        "flex size-[150px] items-center justify-center overflow-clip rounded-[20px] bg-white p-8 xl:size-[200px] 2xl:size-[250px]",
+        "flex size-[150px] items-center justify-center overflow-clip rounded-[20px] bg-white p-8 transition duration-300 hover:shadow-lg xl:size-[200px] 2xl:size-[250px]",
         className,
       )}
     >
@@ -49,7 +53,7 @@ function PartnerItem({ src, className }: { className?: string; src: string }) {
         alt=""
         width={250}
         height={250}
-        className="object-contain"
+        className="object-contain opacity-50 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
       />
     </div>
   );
