@@ -8,6 +8,7 @@ import Partners from "@/app/_components/partners";
 import NewsSection from "@/app/_components/news-section";
 import ConsultationSection from "@/app/_components/consultation-section";
 import CareerSection from "@/app/_components/career-section";
+import ContactsSection from "@/app/_components/contacts-section";
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
         <ConsultationSection />
 
         <CareerSection />
+
+        <ContactsSection />
       </main>
     </div>
   );
