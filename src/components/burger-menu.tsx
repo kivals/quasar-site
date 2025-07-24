@@ -9,17 +9,26 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { PropsWithChildren } from "react";
 import { MenuIcon } from "@/components/icons/menu";
 import Image from "next/image";
 
-export default function BurgerMenu({ children }: PropsWithChildren) {
+const menuItems = [
+  "Компания",
+  "Продукты",
+  "Услуги",
+  "Партнеры",
+  "Новости",
+  "Контакты",
+  "Карьера",
+];
+
+export default function BurgerMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <MenuIcon className="size-6 lg:hidden" />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="w-full">
         <SheetHeader>
           <SheetTitle>
             <div className="flex items-center gap-1">
@@ -42,41 +51,16 @@ export default function BurgerMenu({ children }: PropsWithChildren) {
         </SheetHeader>
         <div className="grid flex-1 auto-rows-min gap-6 px-4">
           <ul className="flex flex-col gap-y-2 text-[30px]">
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Компания
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Продукты
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Услуги
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Партнеры
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Новости
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Контакты
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-accent transition duration-300" href="#">
-                Карьера
-              </a>
-            </li>
+            {menuItems.map((menuItem) => (
+              <li key={menuItem}>
+                <a
+                  className="hover:text-accent transition duration-300"
+                  href="#"
+                >
+                  {menuItem}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <SheetFooter>

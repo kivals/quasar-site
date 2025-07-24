@@ -1,8 +1,17 @@
-import { MenuIcon } from "@/components/icons/menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Container from "@/components/container";
 import BurgerMenu from "@/components/burger-menu";
+
+const menuItems = [
+  "Компания",
+  "Продукты",
+  "Услуги",
+  "Партнеры",
+  "Новости",
+  "Контакты",
+  "Карьера",
+];
 
 export function Header() {
   return (
@@ -25,27 +34,11 @@ export function Header() {
           </div>
 
           <ul className="hidden flex-wrap items-center gap-y-2 lg:flex lg:gap-x-3 lg:text-[18px] xl:gap-x-4 xl:text-[20px] 2xl:gap-x-6 2xl:text-[24px]">
-            <li>
-              <a href="#">Компания</a>
-            </li>
-            <li>
-              <a href="#">Продукты</a>
-            </li>
-            <li>
-              <a href="#">Услуги</a>
-            </li>
-            <li>
-              <a href="#">Партнеры</a>
-            </li>
-            <li>
-              <a href="#">Новости</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-            <li>
-              <a href="#">Карьера</a>
-            </li>
+            {menuItems.map((menuItem) => (
+              <li key={menuItem}>
+                <a href="#">{menuItem}</a>
+              </li>
+            ))}
           </ul>
 
           <Button className="bg-accent hidden cursor-pointer rounded-[20px] py-6 font-semibold text-white lg:flex lg:text-lg xl:text-xl">

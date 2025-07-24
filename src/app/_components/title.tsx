@@ -21,7 +21,7 @@ export function Title() {
 
         <div className="relative w-full overflow-x-clip xl:-mt-24">
           {/* TODO Globe подвешивает браузер */}
-          <Globe className="-ml-[20%] w-[140%] xl:mx-auto xl:max-w-[1100px]" />
+          {/*<Globe className="-ml-[20%] w-[140%] xl:mx-auto xl:max-w-[1100px]" />*/}
         </div>
 
         <div className="mt-55 flex flex-col gap-x-3 rounded-[40px] bg-white pt-5 pb-8.5 drop-shadow-[0_0_50px_#34538980] lg:flex-row xl:mt-110 xl:flex xl:p-20">
