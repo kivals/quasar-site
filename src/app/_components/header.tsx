@@ -2,6 +2,7 @@ import { MenuIcon } from "@/components/icons/menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Container from "@/components/container";
+import BurgerMenu from "@/components/burger-menu";
 
 export function Header() {
   return (
@@ -20,7 +21,7 @@ export function Header() {
             <h1 className="text-[27px] xl:text-[42px] 2xl:text-[52px]">
               Quasar
             </h1>
-            <MenuIcon className="size-6 lg:hidden" />
+            <BurgerMenu />
           </div>
 
           <ul className="hidden flex-wrap items-center gap-y-2 lg:flex lg:gap-x-3 lg:text-[18px] xl:gap-x-4 xl:text-[20px] 2xl:gap-x-6 2xl:text-[24px]">

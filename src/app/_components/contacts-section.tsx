@@ -70,7 +70,7 @@ export default function ContactsSection() {
   );
 }
 
-function ContactCard({
+export function ContactCard({
   children,
   className,
 }: { className?: string } & PropsWithChildren) {
